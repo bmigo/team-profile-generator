@@ -1,0 +1,29 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "module project",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmigo/team-profile-generator.git"
+  },
+  "author": "bmigo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmigo/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/bmigo/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
