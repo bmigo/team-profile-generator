@@ -45,7 +45,7 @@ function runApp () {
                 {
                     type:"input",
                     name:"engineerEmail",
-                    message:"What is this engineer's email?"
+                    message:"What is this engineer's email address?"
                 },
                 {
                     type:"input",
@@ -62,6 +62,33 @@ function runApp () {
 
     function addIntern () {
         //create inquirer prompt for intern NAME, ID, EMAIL, SCHOOL
+        inquirer.prompt(
+            [
+                {
+                    type:"input",
+                    name:"internName",
+                    message:"What is this intern's name?"
+                },
+                {
+                    type:"input",
+                    name:"internID",
+                    message:"What is this intern's ID #?"
+                },
+                {
+                    type:"input",
+                    name:"internEmail",
+                    message:"What is this intern's email address?"
+                },
+                {
+                    type:"input",
+                    name:"internSchool",
+                    message:"What school does this intern attend?"
+                }
+            ]
+        ).then(answers => {
+            const intern = new Intern(answers.internName, answers.internID, answers.internEmail, answers.internSchool);
+            teamMembers.push(intern);
+        })
 
     }
 
