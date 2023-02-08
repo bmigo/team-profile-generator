@@ -20,8 +20,36 @@ generateEngineer = engineer => {
     ;
 };
 
+generateIntern = intern => {
+    return 
+    <div class="card">
+        <h1 class="card-title">${intern.getName()}</h1>
+        <h2 class="card-title">${intern.getRole()}</h2>
+        <div class="card-body">
+            <ul>
+                <li>ID #: ${intern.getID}</li>
+                <li>Email: ${intern.getEmail}</li>
+                <li>School: ${intern.getSchool}</li>
+            </ul>
+        </div>
+    </div>
+    ;
+};
 
-
-
+generateManager = manager => {
+    return 
+    <div class="card">
+        <h1 class="card-title">${manager.getName()}</h1>
+        <h2 class="card-title">${manager.getRole()}</h2>
+        <div class="card-body">
+            <ul>
+                <li>ID #: ${manager.getID}</li>
+                <li>Email: ${manager.getEmail}</li>
+                <li>Office Number: ${manager.getOfficeNum}</li>
+            </ul>
+        </div>
+    </div>
+    ;
+};
 
 };
