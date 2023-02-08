@@ -7,6 +7,8 @@ const fs = require('fs');
 const generateTeamMembers = require('./src/template'); //complete template.js
 const { default: inquirer } = require('inquirer');
 
+
+
 function runApp () {
     //create functions with inquirer to prompt user
     function makeTeam () {
@@ -28,6 +30,34 @@ function runApp () {
     }
     function addEngineer () {
         //create inquirer prompt for engineer NAME, ID, EMAIL, GITHUB
+        inquirer.prompt(
+            [
+                {
+                    type:"input",
+                    name:"engineerName",
+                    message:"What is this engineer's name?"
+                },
+                {
+                    type:"input",
+                    name:"engineerID",
+                    message:"What is this engineer's ID #?"
+                },
+                {
+                    type:"input",
+                    name:"engineerEmail",
+                    message:"What is this engineer's email?"
+                },
+                {
+                    type:"input",
+                    name:"engineerGithub",
+                    message:"What is this engineer's Github link?"
+                }
+            ]
+        ).then(answers => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub);
+            //push engineer to team members
+
+        })
     }
 
     function addIntern () {
