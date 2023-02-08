@@ -27,15 +27,15 @@ function runApp () {
             })
     }
     function addEngineer () {
-        //create inquirer prompt for engineer
+        //create inquirer prompt for engineer NAME, ID, EMAIL, GITHUB
     }
 
     function addIntern () {
-        //create inquirer prompt for intern
+        //create inquirer prompt for intern NAME, ID, EMAIL, SCHOOL
     }
 
     function addManager () {
-        //create inquirer prompt for manager
+        //create inquirer prompt for manager NAME, ID, EMAIL, OFFICE NUM
     }
 
 
