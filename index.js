@@ -94,6 +94,33 @@ function runApp () {
 
     function addManager () {
         //create inquirer prompt for manager NAME, ID, EMAIL, OFFICE NUM
+        inquirer.prompt(
+            [
+                {
+                    type:"input",
+                    name:"managerName",
+                    message:"What is this manager's name?"
+                },
+                {
+                    type:"input",
+                    name:"managerID",
+                    message:"What is this manager's ID #?"
+                },
+                {
+                    type:"input",
+                    name:"managerEmail",
+                    message:"What is this manager's email address?"
+                },
+                {
+                    type:"input",
+                    name:"managerOfficeNum",
+                    message:"What is this manager's office #?"
+                }
+            ]
+        ).then(answers => {
+            const manager = newManager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNum);
+            teamMembers.push(manager);
+        })
     }
 
     generateTeamMembers(teamMembers);
